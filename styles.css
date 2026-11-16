@@ -1,0 +1,329 @@
+:root {
+  --bg-main: #faf9f6;
+  --bg-white: #ffffff;
+  --bg-card-highlight: #fef9e1;
+  --text-primary: #1d232a;
+  --text-muted: #525b65;
+  --brand-yellow: #f9d71c;
+  --action-navy: #1e3a5f;
+  --action-navy-hover: #152a45;
+  --trust-sage: #3b6e5c;
+  --border-light: #dce2e8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  height: 68px;
+  width: auto;
+  display: block;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-nav a:not(.btn) {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.main-nav a:not(.btn):hover {
+  color: var(--action-navy);
+}
+
+/* Typography */
+h1,
+h2 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow-script {
+  font-family: "Alex Brush", cursive;
+  font-size: 2.25rem;
+  color: var(--action-navy);
+  margin-bottom: 0.25rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn-sm {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+.btn-navy {
+  background-color: var(--action-navy);
+  color: var(--bg-white);
+}
+
+.btn-navy:hover {
+  background-color: var(--action-navy-hover);
+}
+
+.btn-yellow {
+  background-color: var(--brand-yellow);
+  color: var(--text-primary);
+}
+
+.btn-yellow:hover {
+  filter: brightness(0.95);
+}
+
+.btn-outline {
+  border: 2px solid var(--action-navy);
+  color: var(--action-navy);
+}
+
+.btn-outline:hover {
+  background-color: var(--action-navy);
+  color: var(--bg-white);
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Sections & Grids */
+.section {
+  padding: 4.5rem 0;
+}
+
+.bg-tint {
+  background-color: var(--bg-white);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.badge-yellow,
+.badge-sage {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.badge-yellow {
+  background-color: var(--bg-card-highlight);
+  color: var(--text-primary);
+  border: 1px solid var(--brand-yellow);
+}
+
+.badge-sage {
+  background-color: #e8f1ee;
+  color: var(--trust-sage);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.75rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.pricing-card.featured {
+  background-color: var(--bg-card-highlight);
+  border: 2px solid var(--brand-yellow);
+}
+
+.featured-banner {
+  position: absolute;
+  top: -13px;
+  right: 1.5rem;
+  background-color: var(--action-navy);
+  color: var(--bg-white);
+  font-family: "Jost", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.75rem;
+  border-radius: 4px;
+}
+
+.price {
+  font-family: "Jost", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--action-navy);
+}
+
+.price span {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.hours {
+  font-weight: 600;
+  color: var(--trust-sage);
+  margin-bottom: 1rem;
+}
+
+/* Trust Boxes */
+.trust-box {
+  background-color: var(--bg-white);
+  border-left: 4px solid var(--trust-sage);
+  border-top: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.75rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--text-primary);
+  color: var(--bg-white);
+  text-align: center;
+  padding: 4.5rem 0 3rem;
+}
+
+.site-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.site-footer p {
+  max-width: 600px;
+  margin: 0 auto 1.75rem;
+  color: #d0d6dc;
+}
+
+.signature {
+  font-family: "Alex Brush", cursive;
+  font-size: 2.4rem;
+  color: var(--brand-yellow) !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #8e98a2 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .main-nav a:not(.btn) {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
